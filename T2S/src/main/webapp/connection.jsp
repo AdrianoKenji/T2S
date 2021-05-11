@@ -9,9 +9,9 @@
 	try {
 		
 		Connection connection = DriverManager.getConnection(jdbcURL, username, password);
-		out.println("Conectado com o Banco de Dados <br>");
+		out.println("Conectado com o Banco de Dados <br><br>");
 		
-		String sql = "SELECT * FROM seguranca.login";
+		String sql = "SELECT * FROM conteiner.exemplo";
 		
 		Statement statement = connection.createStatement();
 		
@@ -19,8 +19,7 @@
 		
 		while(result.next()) {
 			
-			 out.println(result.getString("id") + result.getString("usuario") + result.getString("senha"));
-		
+			 out.println(result.getString(1) + " - " + result.getString(2) + " - " + result.getString(3) + " - " + result.getString(4) + " - " + result.getString(5) + "<br><br>");
 		}
 		
 		connection.close();

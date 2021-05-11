@@ -1,0 +1,27 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<header>
+	<% 
+		if(session.getAttribute("logado") == null) {
+			%> 
+				<a href="index.jsp">Página Inical</a>
+				<a href="sobre.jsp">Sobre nós</a>
+				<a href="login.jsp">Login</a>				 
+			<% 	
+		} if (session.getAttribute("logado") != null) {
+			%> 
+				<a href="index.jsp">Página Inicial</a>
+				<a href="sobre.jsp">Sobre nós</a>
+				<a href="explorer.jsp">Explorer</a>
+				
+				<form>
+					<input type="submit" name="logout" value="Logout">
+				</form>
+			<%
+			
+			if(request.getParameter("logout") != null) {
+				session.removeAttribute("logado");
+				response.sendRedirect("index.jsp");
+			}
+		}
+	%>
+</header>
