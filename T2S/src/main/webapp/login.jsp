@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html"%>
 <%@ page import="java.sql.*"%>
 <%
 	String jdbcURL = "jdbc:postgresql://localhost:5432/db_t2s";
@@ -25,7 +25,13 @@
 				 out.println("Você está conectado");
 				 session.setAttribute("logado", "true");
 				 response.sendRedirect("explorer.jsp");
-			 }
+			 } 
+			 
+		}
+		
+		if(request.getParameter("direcionar") != null) {
+			session.setAttribute("num", String.valueOf(request.getParameter("numeroConteiner")));
+			response.sendRedirect("mov-conteiner.jsp");
 		}
 		
 		connection.close();
@@ -40,13 +46,14 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	<meta charset="ISO-8859-1">
-	<title>Login</title>
+		<meta charset="UTF-8">
+		<title>Login</title>
+		<link rel="shortcut icon" href="favicon.ico"/>
 	</head>
 	<body>
 		<h1>Login</h1>
 		
-		<form method="POST">
+		<form method="GET">
 			<br><label>Username:</label>
 			<input type="text" name="username">
 			
@@ -61,5 +68,6 @@
 		<br>
 		
 		<a href="index.jsp">Voltar</a>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
 	</body>
 </html>

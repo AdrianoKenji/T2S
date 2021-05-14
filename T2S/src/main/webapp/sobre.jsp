@@ -1,10 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html"%>
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="ISO-8859-1">
+		<meta charset="UTF-8">
 		<title>Sobre nós</title>
+		<link rel="shortcut icon" href="favicon.ico"/>
 	</head>
 	<body>
 	
@@ -24,6 +24,28 @@
 			<li>Página Explorer privada (apenas logado)</li>
 			<li>Página de Login</li>
 		</ul>
-			
+		
+		<h3>Versão 1.1 - T2S</h3>
+		
+		<p>Sistema de gerenciamento CRUD para os Contêineres com função de adicionar, exibir, deletar e editar.</p>
+		
+		<ul>
+			<li>Criar conteiner</li>
+			<li>Exibir conteiner</li>
+			<li>Editar conteiner</li>
+			<li>Deletar conteiner</li>
+		</ul>
+		
+		<h3>Versão 1.2 - T2S</h3>
+		
+		<p>Sistema de gerenciamento CRUD para a Movimentação dos contêineres com função de adicionar, exibir, deletar e editar.</p>
+		
+		<ul>
+			<li>Criar movimentação</li>
+			<li>Exibir movimentação</li>
+			<li>Editar movimentação</li>
+			<li>Deletar movimentação</li>
+		</ul>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
 	</body>
 </html>
