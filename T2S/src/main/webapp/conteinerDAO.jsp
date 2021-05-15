@@ -70,6 +70,8 @@
 			pstm.close();
 			connection.close();
 	
+		} else if(request.getParameter("gerar") != null) {
+			
 		}
 		
 	} catch (SQLException e) {	

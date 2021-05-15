@@ -1,21 +1,107 @@
 <%@ page language="java" contentType="text/html"%>
-<header>
+<style>
+	body {
+    	background: #f7f7f7;
+    	color: #25282B;
+    	font-family: 'Montserrat', sans-serif;
+	}	
+	
+	body.hideScroll {
+    	overflow: hidden;
+	}
+	
+	a, #logout {
+    	color: #034f84;
+    	font-weight: bold;
+    	text-decoration: none;
+    	margin: 4px;
+	}
+	
+	a img {
+		width: 64px;
+	}
+	
+	a:hover {
+    	text-decoration: underline;
+	}
+	
+	button {
+		background-color: #034f84;
+		font-family: 'Montserrat', sans-serif;
+		border: none;
+		padding: 10px;
+		width: 100%;
+		border-radius: 10px;
+		color: white;
+		font-size: 16px;		
+		margin-top: 20px;
+	}	
+	
+	footer {
+	    text-align: center;
+	    
+	    font-size: 14px;
+	    font-weight: regular;
+	    line-height: 18px;
+	    letter-spacing: 0.2px;
+	    color: #034f84;
+	    
+	    position: fixed;
+		bottom:0;
+   		width:100%;
+	}
+	
+	button:hover {
+		background-color: deepskyblue;
+		cursor: pointer;
+	}
+	
+</style>
+
 	<% 
 		if(session.getAttribute("logado") == null) {
 			%> 
-				<a href="index.jsp">Página Inical</a>
-				<a href="sobre.jsp">Sobre nós</a>
-				<a href="login.jsp">Login</a>				 
+			<header>	
+				<a href="index.jsp">
+					<img src="./img/logo.png" alt="Logo da empresa">
+				</a>	
+				<nav>
+					<li>
+						<a href="index.jsp">Home</a>
+					</li>
+					<li>
+						<a href="sobre.jsp">Sobre nós</a>
+					</li>
+					<li>
+						<a href="login.jsp">Login</a>	
+					</li>		
+				</nav>
+				</header>				 
 			<% 	
 		} if (session.getAttribute("logado") != null) {
 			%> 
-				<a href="index.jsp">Página Inicial</a>
-				<a href="sobre.jsp">Sobre nós</a>
-				<a href="explorer.jsp">Explorer</a>
+				<header>	
+					<a href="index.jsp">
+						<img src="./img/logo.png" alt="Logo da empresa">
+					</a>	
+					<nav>
+						<li>
+							<a href="index.jsp">Home</a>
+						</li>
+						<li>
+							<a href="sobre.jsp">Sobre nós</a>
+						</li>
+						<li>
+							<a href="explorer.jsp">Explorer</a>	
+						</li>		
+					</nav>
+					<div class="logout">
+						<form>
+							<button type="submit" name="logout" value="logout">Sair</button>
+						</form>
+					</div>
+				</header>
 				
-				<form>
-					<input type="submit" name="logout" value="Logout">
-				</form>
 			<%
 			
 			if(request.getParameter("logout") != null) {
@@ -24,4 +110,3 @@
 			}
 		}
 	%>
-</header>

@@ -6,15 +6,16 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Movimentação Conteiner</title>
-		<link rel="shortcut icon" href="favicon.ico"/>
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700,900&display=swap" rel="stylesheet">
+		<link rel="shortcut icon" href="./img/favicon.ico"/>
 		
 		<link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css">
-			<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css">
-			<link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap5.min.css">
-			
-    		<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    		<script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
-    		<script type="text/Javascript" language="javascript">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap5.min.css">
+		
+   		<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+   		<script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+   		<script type="text/Javascript" language="javascript">
 			    $(document).ready(function () {
 			            $('#mov-conteiner').DataTable({
 			            	 "language": {
@@ -27,10 +28,81 @@
 			          });
 			       });			      
     		</script>
+    		
+    		<style>
+				#container {
+				    width: 80%;
+				    max-width: 980px;
+				
+				    margin: 40px auto;
+				
+				    display: flex;
+				}
+				
+				#movimentacao #container {
+				    display: block;
+				}
+				#movimentacao header {
+				    display: flex;
+				    justify-content: space-between;
+				}
+				#movimentacao nav {
+				    display: flex;
+				    align-items: center;
+				}
+				#movimentacao nav li {
+				    list-style-type: none;
+				
+				    margin-right: 16px;
+				}
+				#movimentacao nav li a {
+				    color: #034f84;
+				}
+				#movimentacao nav li a.button {
+				    color: #034f84;
+				}
+				#movimentacao nav li:last-child {
+				    margin: 0;
+				}
+				section#title {
+				    text-align: center;
+				}				
+				section#title h1 {
+				    margin: 0;
+					color: #034f84;
+				    font-size: 64px;
+				}			
+				section#title {
+				    margin-top: 64px;
+				}					
+				input {
+					padding: 15px;
+					border: none;
+					outline: none;
+					font-size: 15px;
+					background-color: #034f84;
+					border-radius: 10px;
+					color: black;
+					font-size: 15px;					
+					margin:30px;
+					
+					align-content: center;
+				}			
+				
+				div.formulario {
+					text-align: center;
+					background-color: #f7f7f7;
+					border-radius: 8px;
+					
+				}			
+		</style>
 	</head>
-	<body>
-		<%@ include file="WEB-INF/lib/header.jspf" %>
+	<body id="movimentacao">
 	
+		<div id="container">
+			<%@ include file="WEB-INF/lib/header.jspf" %>
+		</div>
+		
 		<% 
 			if(session.getAttribute("num") != null) {
 				
@@ -38,9 +110,11 @@
 				
 				if(session.getAttribute("logado") != null) { 
 		
-		%>
-				<h1>Movimentação do conteiner <%= conteiner	 %></h1>
-	
+		%>		
+		<section id="title">
+			<h1>Movimentação do conteiner <%= conteiner	 %></h1>
+		</section>
+			<div class="formulario">
 				<form action="mov-conteinerDAO.jsp" method="POST">
 					<label>Tipo Movimentação:</label>
 					<select name="tipoMovimentacao" required>
@@ -62,7 +136,8 @@
 					<input type="text" hidden name="id" value="<%= conteiner %>"> 
 					<button type="submit" name="mov-adicionar" value="">Adicionar Movimentação</button>
 				</form>
-					
+			</div>
+			<br>
 		<%
 		
 			String jdbcURL = "jdbc:postgresql://localhost:5432/db_t2s";
