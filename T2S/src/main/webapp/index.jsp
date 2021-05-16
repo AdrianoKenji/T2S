@@ -127,7 +127,7 @@
 						<h3>Gerenciamento de Conteiner</h3>
 						<p>Conteiner</p>
 						<div class="description">
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem ab aspernatur quos hic repellendus? Similique mollitia, corrupti a quas in eum nulla atque laudantium facere, voluptas earum et officiis dicta.
+							Adicionar, exibir, deletar e editar os contêineres.
 						</div>
 					</div>
 				</div>
@@ -139,8 +139,8 @@
 					<div class="content">
 						<h3>Gerenciamento da Movimentação</h3>
 						<p>Movimentação</p>
-						<div class="descripti	on">
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem ab aspernatur quos hic repellendus? Similique mollitia, corrupti a quas in eum nulla atque laudantium facere, voluptas earum et officiis dicta.
+						<div class="description">
+							Adicionar, exibir, deletar e editar a movimentação dos contêineres.
 						</div>
 					</div>
 				</div>
@@ -153,7 +153,7 @@
 						<h3>Relatório da Movimentação</h3>
 						<p>Relatório</p>
 						<div class="description">
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem ab aspernatur quos hic repellendus? Similique mollitia, corrupti a quas in eum nulla atque laudantium facere, voluptas earum et officiis dicta.
+							Gera o relatórios de todas as movimentações adicionadas ao sistema.
 						</div>
 					</div>
 				</div>
@@ -166,7 +166,7 @@
 						<h3>Autenticação</h3>
 						<p>Segurança</p>
 						<div class="description">
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem ab aspernatur quos hic repellendus? Similique mollitia, corrupti a quas in eum nulla atque laudantium facere, voluptas earum et officiis dicta.
+							Tela de login para ter acesso ao sistema.
 						</div>
 					</div>
 				</div>
