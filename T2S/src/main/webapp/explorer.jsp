@@ -89,7 +89,7 @@
 						<button type="submit">Ir para Container</button>	
 					</form>											
 					<br>
-					<form action="mov-conteiner.jsp">
+					<form action="relatorio.jsp">
 						<button type="submit">Ir para Movimentação</button>	
 					</form>
 				</div>																		
@@ -97,16 +97,6 @@
 		</div>		
 		<%@ include file="WEB-INF/lib/footer.jspf" %>
 		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
-		<!-- 
-		<script>
-			var app = new Vue({
-				el: "#app",
-				data: {
-					titulo: "piroca"
-				}
-			});
-		</script>
-		 -->
 	</body>
 </html>
 

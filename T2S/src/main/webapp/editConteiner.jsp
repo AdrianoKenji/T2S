@@ -133,8 +133,5 @@
 			<br>
 			<a href="conteiner.jsp">Voltar</a>
 		</div>
-
-		
-		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
 	</body>
 </html>

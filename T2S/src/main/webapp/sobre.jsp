@@ -185,7 +185,6 @@
 				</div>				
 			</section>
 		</main>
-		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
 		<%@ include file="WEB-INF/lib/footer.jspf" %>
 	</body>
 </html>

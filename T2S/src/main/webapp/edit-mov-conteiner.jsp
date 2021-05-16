@@ -136,7 +136,6 @@
 		</div>
 		<br><br><br>
 		<a href="mov-conteiner.jsp">Voltar</a>
-		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
 	</body>
 	<% 
 			}
